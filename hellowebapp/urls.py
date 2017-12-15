@@ -28,6 +28,8 @@ urlpatterns = patterns('',
 	url(r'^projects/(?P<slug>[-\w]+)/$',
 		'collection.views.project_detail',
 		name= 'project_detail'),
+	url(r'^projects/(?P<slug>[-\w]+)/edit/$',
+		'collection.views.edit_project', name='edit_project'),
 	url(r'^admin/', include(admin.site.urls)),
 	
 )
