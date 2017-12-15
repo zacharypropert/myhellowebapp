@@ -3,20 +3,12 @@
 {% block title  %}Homepage | {{ block.super }}{% endblock %}
 {% block content %}
 	<h1>Hello World!</h1>
-	<p>I am a basic website. left off on page 26</p>
-	<p>{{ number }}</p>
-	<p>{% if number %}Number exists!!{% endif %}</p>
-	<p>There are {{ number|apnumber }} dogs! <b>
-	{% if number == 6 %}
-		True
-	{% else %}
-		False
-	{% endif %}
-	</b></p>
-	<p>My favorite animal is: {{ thing }} </p>
+	<h2>I am a basic website. left off on page 50, the start of chapter 8</h2>
+
 	{% for project in projects %}
-	<h2>{{project.name }}</h2>
-	<p>{{ project.description }}</p>
+	<h2><a href="{% url 'project_detail' slug=project.slug %}"> {{ project.name }} </a></h2>
+	<p> {{ project.description }} </p>
+
 	{% endfor %}
 {% endblock %}
 
