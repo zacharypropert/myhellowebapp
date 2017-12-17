@@ -2,7 +2,7 @@
 {% load humanize %}
 {% block title  %}Homepage | {{ block.super }}{% endblock %}
 {% block content %}
-	<h2>I am a basic website. left off on page 50, the start of chapter 8</h2>
+	<h2>I am a basic website. left off on page 79</h2>
 
 	{% for project in projects %}
 	<h2><a href="{% url 'project_detail' slug=project.slug %}"> {{ project.name }} </a></h2>
